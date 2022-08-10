@@ -74,9 +74,23 @@ varsayalım ki php yüklemeye çalıştığınız sistem .php uzantısını enge
 
 
 
+kod çalıştırma açıkları
+dns lookup da google.com yazınca server ip adres, falan çıktığını görüyoruz demekki burda bir komutçalışıyor ve bu bilgiler bize geliyor.
+
+![photo_6025856227893950502_w](https://user-images.githubusercontent.com/110966683/183921757-a1247bc9-64c7-4e48-9fd9-a473487bafcd.jpg)
 
 
 
+ şimdi biz burda kendi komutlarımızı çalıştırmayıdeneyeceğiz.
+ öncelikle her zamanki gibi yazdığımız şeyden sonra ; koyup komut çalıştırıyoruz 
+
+
+![photo_6025856227893950501_w](https://user-images.githubusercontent.com/110966683/183921778-f63217ea-c0f4-4dee-a8d0-283ff1959517.jpg)
+
+
+
+gördüğünüz gibi ls komutu çalıştı demekki burda kod çalıştırma açığı var.
+ekstra olarak site ; ü engellemiş olabilir biz kendi terminalimizde 2 komut çalıştırmak istediğimizde && (ve) işaretini koyarsak yazılan 2 komutu da çalıştır anlamına gelir ya da | (alt ve tire tuşlarıyla yapabilirsiniz) işaretiye ilkkomutu çalıştır ilk komutun cevabını al 2. komutta kullan anlamına gelen bu işareti kullanırız o yüzden ; olmazsa tek tek diğer işaretleride deneyebilirsiniz.
 
 
 
