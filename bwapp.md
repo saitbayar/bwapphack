@@ -75,7 +75,7 @@ varsayalım ki php yüklemeye çalıştığınız sistem .php uzantısını enge
 
 
 kod çalıştırma açıkları
-dns lookup da google.com yazınca server ip adres, falan çıktığını görüyoruz demekki burda bir komutçalışıyor ve bu bilgiler bize geliyor.
+dns lookup da google.com yazınca server ip adres, falan çıktığını görüyoruz demekki burda bir komut çalışıyor ve bu bilgiler bize geliyor.
 
 ![photo_6025856227893950502_w](https://user-images.githubusercontent.com/110966683/183921757-a1247bc9-64c7-4e48-9fd9-a473487bafcd.jpg)
 
@@ -90,7 +90,26 @@ dns lookup da google.com yazınca server ip adres, falan çıktığını görüy
 
 
 gördüğünüz gibi ls komutu çalıştı demekki burda kod çalıştırma açığı var.
-ekstra olarak site ; ü engellemiş olabilir biz kendi terminalimizde 2 komut çalıştırmak istediğimizde && (ve) işaretini koyarsak yazılan 2 komutu da çalıştır anlamına gelir ya da | (alt ve tire tuşlarıyla yapabilirsiniz) işaretiye ilkkomutu çalıştır ilk komutun cevabını al 2. komutta kullan anlamına gelen bu işareti kullanırız o yüzden ; olmazsa tek tek diğer işaretleride deneyebilirsiniz.
+ekstra olarak site ; işaretini engellemiş olabilir biz kendi terminalimizde 2 komut çalıştırmak istediğimizde && (ve) işaretini koyarsak yazılan 2 komutu da çalıştır anlamına gelir ya da | (alt ve tire tuşlarıyla yapabilirsiniz) işaretiye ilkkomutu çalıştır ilk komutun cevabını al 2. komutta kullan anlamına gelen bu işareti kullanırız o yüzden ; olmazsa tek tek diğer işaretleride deneyebilirsiniz.
 
 
+bunun için linux ta hazır bir tool var onu inceleyelim
+commix
+nasıl çalıştığını anlamak için öncelikle commix --help yazıp dökümanına bakabilirsiniz 
+ama daha öncesinde burp suiti açmamız gerek burp suiti açıp target kısmından  bWAPP klasörüne gelip  post medodunu açıyoruz burda bizemiz hakkında bilgiler yazıyor
+
+![photo_6025856227893950508_w](https://user-images.githubusercontent.com/110966683/183929265-e9f02c35-f80e-4215-909d-61705a5ce74f.jpg)
+
+
+şimdi bu bilgileri kullanarak commix toolumuzu çalıştıracağız 
+
+
+commix --url="http://192.168.1.74/bWAPP/commandi.php" --cookie="PHPSESSID=384fe54d2b5eb725e8f877f27ec54b5f; security_level=0" --data="target=www.google.com%3Bls&form=submit"
+
+
+![photo_6025856227893950514_w](https://user-images.githubusercontent.com/110966683/183929316-a19799a3-b7fe-4ad2-9e35-54ee536c9e67.jpg)
+
+
+
+gördüğünüz gibi ben burda gerekli bilgileri yazıp çalıştırdan sonra commix bizim için hemen bir shell açtı ve siteye bağlandı "?" kullanarak neler yapabileceğinizi görebilirsiniz.
 
