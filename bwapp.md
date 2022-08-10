@@ -2,7 +2,7 @@ SQL İNJECTİON - REFLECTED (GET)
 
 ![photo_6023604428080265317](https://user-images.githubusercontent.com/110966683/183882924-70f82c7d-2eda-466c-9db7-4680c145040d.jpeg)
 
-bu panelde html açığı olup olmadığını anlamak için panele html kodu yazıyoruz ben örnek olarak <!--<h1>sait</h1>*/--> yazıyorum.
+bu panelde html açığı olup olmadığını anlamak için panele html kodu yazıyoruz ben örnek olarak başlık satırı içinde adımı  yazıyorum.
 
 ![photo_6025856227893950465_w](https://user-images.githubusercontent.com/110966683/183883997-b8cb1b5b-2198-4612-ac88-f445d160f5e6.jpeg)
 
