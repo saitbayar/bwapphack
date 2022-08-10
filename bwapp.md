@@ -52,6 +52,26 @@ görülen html kodunu yazıp forward ediyoruz
 
 görüldüğü gibi yazdığımız kod çalıştı.
 
+PHP İNJECTİON
+
+php urlsinde komut çalıştırmayı deniyoruz 
+normalde iki komut çalıştırmek için komutların arasına ; konur şimdi bunu deneyeceğiz
+; koyup system("whoamı") çalıştırıyoruz yani sistem içinde ben kimim komutu çalıştırıyoruz 
+
+php upload açıkları
+upload açıkları 
+weevely weevely aracı bizim için php payloadı oluşturuyor 
+weevely generate 123456 myweevely.php
+weevely generate yazıp şifre sonrada isim yazıp payload oluşturuyoruz bunu resim update etme yerinden update etmeyi deneyeceğiz ve upload olunca weevely aracımıza gelip 
+weevely yazıyoruz sonra update ettiğimiz url yi ve son olarak şifreyi yazıp giriyoruz 
+
+![photo_6025856227893950494_w](https://user-images.githubusercontent.com/110966683/183912608-ed9b34b1-5c7d-44b5-9e28-b0ecf7d5f834.jpg)
+
+
+gördüğünüz gibi sistemi hackledik.
+
+varsayalım ki php yüklemeye çalıştığınız sistem .php uzantısını engellemiş o zaman linux terminalimize gelip cp myweevely.php myweevely.php3 (3 olmak zorunda değil siz başka rakamda deneyebilirsiniz.)şeklinde deneyebilirsiniz yani php dosyamızın adını php3 olarak değiştirdik sadece ama uzantı olarak hala php alternatif olarak denenebilir. 
+
 
 
 
