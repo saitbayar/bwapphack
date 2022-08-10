@@ -15,6 +15,7 @@ alert scripti deneyelim şimdi ekrana 1 yazdırması lazım
 ![photo_6023604428080265318_w](https://user-images.githubusercontent.com/110966683/183884371-f0fefa5a-4830-465d-8f45-8b239cb8ccf7.jpg)
 
 HTML İNJECTİON - STORED (BLOG)
+
 eğer bir stored açığı olursa burda çalıştırdığımız bir kod web sitesine giren herkesi etkiler farklı bilgisayrdan bu web sitesine girseniz bile hackerin çalıştırdığı kod çalışacaktır.
 örnek olarak alert scripti çalıştırırsak giren her kullanıcı bu alerti görür
 alert scripti: <h1>Hello,<script>alert(1)</script>!</h1>
@@ -31,3 +32,31 @@ linux natcat komutu: nc -nvlp 4545 dinlemek için
 
 
 görüldüğü gibi belirlediğimizportu dinledi ve kullanıcının bilgilerini getirdi.
+
+İFRAME ENJECTİON
+
+
+iframe enjeksiyonunda brupsuiti açıp proxy kısmından intercepti açıyoruz bu sayede tüm paketler yollanmadan buraya geliyor burda gelen paketi değiştirip forward  ediyoruz ve bizim yaptığımız değişikle site açılıyor 
+
+
+![photo_6025856227893950471_w](https://user-images.githubusercontent.com/110966683/183889548-d56fb3e7-74a5-48ff-b77d-1a23062e705c.jpg)
+
+gelen paket bu şekilde 
+
+![photo_6025856227893950472_w](https://user-images.githubusercontent.com/110966683/183889597-765c5d39-cf45-40dc-ac85-7108d3520731.jpg)
+
+görülen html kodunu yazıp forward ediyoruz 
+
+
+![photo_6025856227893950474_w](https://user-images.githubusercontent.com/110966683/183889800-b5779563-0cdb-4db4-ab5e-396398df50a4.jpg)
+
+görüldüğü gibi yazdığımız kod çalıştı.
+
+
+
+
+
+
+
+
+
