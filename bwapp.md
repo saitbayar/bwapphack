@@ -161,12 +161,14 @@ klasörünü görebilecekmiyiz deneyelim.
 evet gördüğünüz gibi 4 dosya geri gelip /etc/passwd yazınca dosya bilgilerini görüyoruz 
 
 bunun için linux ta hazır bir tool var inceleyelim 
+
 dotdotpwn 
 
 eğer sizde yüklü değilse apt-get install dotdotpwn  yazarak yükleyebilirsiniz 
 komutu çalıştırmak için dotdotpwn -m http -h 192.168.245.159/bWAPP/directory_traversal_1.php?page=message.txt (bwapp urlsini http olmadan yapıştırıyoruz)
 
 ![photo_6028108027707636198_w](https://user-images.githubusercontent.com/110966683/184122721-f567d9b2-d7e3-4b6a-aa09-a197c254ef52.jpg)
+
 yazdık çalıştıralım 
 
 ![photo_6028108027707636199_w](https://user-images.githubusercontent.com/110966683/184122901-5442150a-fe18-451c-9017-d51ef7bac040.jpg)
