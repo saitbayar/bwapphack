@@ -199,6 +199,51 @@ siteye normal kullanıcı adı şifremizi yazınca url de gözüğtüğünü gö
 
 gördüğünüz gibi kodumuz çalıştI ve ekrana alert verdi
 
+reflected ajax xss açıkları:
+
+![photo_6028108027707636229_w](https://user-images.githubusercontent.com/110966683/184140233-34a88298-1f66-4e8b-93e9-5e79adfa33b3.jpg)
+
+öncelikle burp suitimizi açıp ne istekler yaptığını görelim.
+
+![photo_6028108027707636230_w](https://user-images.githubusercontent.com/110966683/184140288-a34e6958-39ca-451d-acac-46bcef56a628.jpg)
+
+
+isteklerin geldiğini görüyoruz 
+
+şimdi xss açığı varmı diye javascript kodları çalıştıralım 
+örnek olarak
+ <script>alert("xss");</script> 
+ 
+ ![photo_6028108027707636232_w](https://user-images.githubusercontent.com/110966683/184140531-7964ee5d-500f-4333-bf2b-dd8e6a06b2bf.jpg)
+
+ 
+gördüüğünüz gibi çalışmadı demek ki bu sitede bir blok var script komutu çalışmıyor
+
+
+<img src=a onerror=alert(1)>  
+
+komutunu deneyelim 
+
+![photo_6028108027707636236_w](https://user-images.githubusercontent.com/110966683/184141902-240dc46a-0c4e-46e6-90dc-0de2823803f8.jpg)
+
+
+unerror komutu yükleyemezsem ne yapayım diye soruyor ve alert yazdığımız içinde gördüğünüz gibi ekrana uyarı mesajını verdi bu komut kullanılan bir kalıptır sizde xss testlerinizde bu komutu kullanabilirsiniz.
+
+xss-stored(blog)
+stored açığı bulursanız eğer uyguladığınız script siteye giren herkese uygulanır bu nedenle az bulunan bir açıktır.
+şimdi verilen panelde script kodu çalıştırmayı deniyoruz 
+
+
+![photo_6028108027707636233_w](https://user-images.githubusercontent.com/110966683/184142320-c9149e5b-36b4-461e-bb10-fb476bdf6ccd.jpg)
+
+çalıştıralım şimdi 
+
+
+![photo_6028108027707636234_w](https://user-images.githubusercontent.com/110966683/184142468-8e9cb42f-6ff2-4aab-906f-494ebd769bc3.jpg)
+
+
+gördüğünüz gibi çalıştı bu siteye giren herkes artık bu uyarı mesajını görecek.
+
 
 
 
