@@ -155,6 +155,8 @@ directory traversel - files:
 kali terminalimizde geri gitmek için nasıl cd .. komutunu kullanıyorsak burda da onu deneyeceğiz message.txt yazan yeri silip bi kaç dosya geri gelelim ve bakalım /etc/passwd 
 klasörünü görebilecekmiyiz deneyelim.
 
+![photo_6028108027707636207_w](https://user-images.githubusercontent.com/110966683/184125098-b858c0c8-71dc-425f-b9a0-5b88c6a774ae.jpg)
+
 
 evet gördüğünüz gibi 4 dosya geri gelip /etc/passwd yazınca dosya bilgilerini görüyoruz 
 
