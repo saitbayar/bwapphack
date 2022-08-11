@@ -113,3 +113,93 @@ commix --url="http://192.168.1.74/bWAPP/commandi.php" --cookie="PHPSESSID=384fe5
 
 gördüğünüz gibi ben burda gerekli bilgileri yazıp çalıştırdan sonra commix bizim için hemen bir shell açtı ve siteye bağlandı "?" kullanarak neler yapabileceğinizi görebilirsiniz.
 
+
+SSI SERVER SİDE İNCLUDE AÇIKLARI
+bir sunucuda çalışan programlama dili (scriptİ) diyebiliriz 
+
+
+
+eğerki bir web sitesinde .shtml görüyarsanız o web sitesinde ssı vardır.
+
+
+![photo_6028108027707636191_w](https://user-images.githubusercontent.com/110966683/184119990-382deefc-701e-45d5-8228-08cf6d096674.jpg)
+
+
+gördüğünüz gibi sitemizde .shtml var
+
+![photo_6028108027707636192_w](https://user-images.githubusercontent.com/110966683/184120309-9e3e7c24-d736-4e56-af81-9c631df301ee.jpg)
+
+şimdi ssı kodlarına bakıp örnek bir komut çalıştıralım.
+
+![photo_6028108027707636193_w](https://user-images.githubusercontent.com/110966683/184120623-a6ea8b79-bc9e-4e8d-86ce-549ce699580f.jpg)
+
+
+gördüğünüz gibi ls komutu çalıştı demekki ssı açığı var.
+
+şimdi nc komutu çalıştırıp sistemi hacklemeyi deneyelim
+
+kali terminalimizden nc -nvlp 1234 komutunu çalıştırıp 1234 portunu dinlemeye başlıyoruz
+
+![photo_6028108027707636195_w](https://user-images.githubusercontent.com/110966683/184121007-70face33-0498-4739-a55c-83ab576260b7.jpg)
+
+
+ve gördüğünüz gibi bağlantı geldi yazdığımız komutlarla sistemi hacklediğimizi görüyoruz.
+
+DİRECTORY TRAVERSEL AÇIKLARI 
+erişim sağlanan yerlerde bug var yani erişimimiz olmayan dosyaları görebilme açıkları 
+directory traversel - files:
+
+![photo_6028108027707636196_w](https://user-images.githubusercontent.com/110966683/184121451-864aef7b-b6d9-4b7b-8de9-92906c7603a2.jpg)
+
+
+kali terminalimizde geri gitmek için nasıl cd .. komutunu kullanıyorsak burda da onu deneyeceğiz message.txt yazan yeri silip bi kaç dosya geri gelelim ve bakalım /etc/passwd 
+klasörünü görebilecekmiyiz deneyelim.
+
+
+evet gördüğünüz gibi 4 dosya geri gelip /etc/passwd yazınca dosya bilgilerini görüyoruz 
+
+bunun için linux ta hazır bir tool var inceleyelim 
+dotdotpwn 
+
+eğer sizde yüklü değilse apt-get install dotdotpwn  yazarak yükleyebilirsiniz 
+komutu çalıştırmak için dotdotpwn -m http -h 192.168.245.159/bWAPP/directory_traversal_1.php?page=message.txt (bwapp urlsini http olmadan yapıştırıyoruz)
+
+![photo_6028108027707636198_w](https://user-images.githubusercontent.com/110966683/184122721-f567d9b2-d7e3-4b6a-aa09-a197c254ef52.jpg)
+yazdık çalıştıralım 
+
+![photo_6028108027707636199_w](https://user-images.githubusercontent.com/110966683/184122901-5442150a-fe18-451c-9017-d51ef7bac040.jpg)
+
+
+gördüğünüz gibi sonuçlar geldi sonuçları incelersek manuel yaptığımız işlemleri tek tek deniyor hatta  "/" işaretinin filtrelenmiş olabilieceğini hesaplayıp mesela %5 yazmış html kodlarına bakarsanız "/" işaretinin "%5" e denk geldiğini görürsünüz
+
+
+![photo_6028108027707636200_w](https://user-images.githubusercontent.com/110966683/184123286-100724b8-6fa4-45f9-b480-b55d4692fe46.jpg)
+
+
+aşşağı indikçe bu şekilde çok örnek görebilirsiniz default olarak 6 ayarlandığı için her şey 6 defa denenmiş
+
+XSS AÇIKLARI 
+web pentesting yaparken karşımıza en fazla çıkan açık türüdür.
+xss reflected get:
+siteye normal kullanıcı adı şifremizi yazınca url de gözüğtüğünü görüyoruz
+
+![photo_6028108027707636201_w](https://user-images.githubusercontent.com/110966683/184123614-576c16b3-1246-4693-bceb-3c95343f9e8e.jpg)
+
+
+şimdi java script kodu çalıştırabiliyormuyuz deneyelim java script bilmiyorsanız  googleye xss payloads yazıp çıkan siteden aldığınız kodları deneyebilirsiniz örnek olarak alert kodu çalıştırıyoruz 
+ <script>alert(123);</script>
+
+
+![photo_6028108027707636202_w](https://user-images.githubusercontent.com/110966683/184123947-8a379ae0-6f8a-4e90-941e-5574cad0ca9a.jpg)
+
+
+gördüğünüz gibi kodumuz çalıştI ve ekrana alert verdi
+
+
+
+
+
+
+
+
+
