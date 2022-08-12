@@ -232,7 +232,7 @@ isteklerin geldiğini görüyoruz
 gördüüğünüz gibi çalışmadı demek ki bu sitede bir blok var script komutu çalışmıyor
 
 
-"<img src=a onerror=alert(1)>"
+<img src=a onerror=alert(1)>
 
 komutunu deneyelim 
 
