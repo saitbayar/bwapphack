@@ -117,6 +117,8 @@ gördüğünüz gibi ben burda gerekli bilgileri yazıp çalıştırdan sonra co
 
 
 SSI SERVER SİDE İNCLUDE AÇIKLARI
+
+
 bir sunucuda çalışan programlama dili (scriptİ) diyebiliriz 
 
 
