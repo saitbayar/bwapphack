@@ -354,7 +354,10 @@ bu komutu çalıştıralım ve id login ve password bilgilerini alalım
 
 
 
-gördüğünüz gibi login olan bee ve A.I.M kullanıcıların adı ve şifresi hahsli şekilde  geldi ekrana.
+gördüğünüz gibi login olan bee ve A.I.M kullanıcıların adı ve şifresi hashli şekilde  geldi ekrana.
+
+
+
 
 
 
