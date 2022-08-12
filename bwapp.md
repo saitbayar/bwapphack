@@ -194,6 +194,7 @@ gördüğünüz gibi sonuçlar geldi sonuçları incelersek manuel yaptığımı
 aşşağı indikçe bu şekilde çok örnek görebilirsiniz default olarak 6 ayarlandığı için her şey 6 defa denenmiş
 
 XSS AÇIKLARI 
+
 web pentesting yaparken karşımıza en fazla çıkan açık türüdür.
 
 xss reflected get:
@@ -231,15 +232,13 @@ isteklerin geldiğini görüyoruz
  
 gördüüğünüz gibi çalışmadı demek ki bu sitede bir blok var script komutu çalışmıyor
 
+şimdi onerror komutunu deneyelim
 
-<img src=a onerror=alert(1)>
-
-komutunu deneyelim 
 
 ![photo_6028108027707636236_w](https://user-images.githubusercontent.com/110966683/184141902-240dc46a-0c4e-46e6-90dc-0de2823803f8.jpg)
 
 
-unerror komutu yükleyemezsem ne yapayım diye soruyor ve alert yazdığımız içinde gördüğünüz gibi ekrana uyarı mesajını verdi bu komut kullanılan bir kalıptır sizde xss testlerinizde bu komutu kullanabilirsiniz.
+Onerror komutu yükleyemezsem ne yapayım diye soruyor ve alert yazdığımız içinde gördüğünüz gibi ekrana uyarı mesajını verdi bu komut kullanılan bir kalıptır sizde xss testlerinizde bu komutu kullanabilirsiniz.
 
 xss-stored(blog):
 stored açığı bulursanız eğer uyguladığınız script siteye giren herkese uygulanır bu nedenle az bulunan bir açıktır.
