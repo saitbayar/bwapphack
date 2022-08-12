@@ -245,6 +245,27 @@ stored açığı bulursanız eğer uyguladığınız script siteye giren herkese
 gördüğünüz gibi çalıştı bu siteye giren herkes artık bu uyarı mesajını görecek.
 
 
+SQL ENJEKSİYON AÇIKLARI 
+
+SQL ENJEKSİYON
+ilk olarak sql enjeksiyonun olup olmadığını anlamak için ilk adım olarak kullanıcı adı 
+ya da şifre yerine tek tırnak işareti koyalım.Bazı sitelerde tek tırnak koyduktan sonra detaylı bir hata mesajı alabilirsiniz.
+
+![photo_6030673690846410787_w](https://user-images.githubusercontent.com/110966683/184313349-77c27e86-0420-4c90-92d8-df54c9b16448.jpg)
+
+
+gördüğünüz gibi burda şifre yerine ' tek tırnak işareti koydum ve gelen hata mesajında bir bozukluk olduğunu farkettim şimdi burd SQL kodları deneyelim bakalım oluyor mu
+
+0' or '0' = '0
+
+0 ya da 0=0 olursa login ol anlamında yani her iki seçenekten sadece biri bile doğruysa 1 kabul et buda login olmamızı sağlar hem şifre hem kullanıcı adı kısmına aynı şeyi yazıp enter diyoruz 
+
+![photo_6030673690846410787_w](https://user-images.githubusercontent.com/110966683/184313457-4f1fcfce-ad5c-46a0-bce4-c7b060e789c0.jpg)
+
+
+ve gördüğünüz gibi sisteme giris yapmayı başardık.
+
+
 
 
 
