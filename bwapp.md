@@ -1,4 +1,6 @@
-SQL İNJECTİON - REFLECTED (GET)
+HTML  ENJEKSİYON AÇIKLARI
+
+html injection - reflected (GET):
 
 ![photo_6023604428080265317](https://user-images.githubusercontent.com/110966683/183882924-70f82c7d-2eda-466c-9db7-4680c145040d.jpeg)
 
@@ -14,7 +16,7 @@ alert scripti deneyelim şimdi ekrana 1 yazdırması lazım
 
 ![photo_6023604428080265318_w](https://user-images.githubusercontent.com/110966683/183884371-f0fefa5a-4830-465d-8f45-8b239cb8ccf7.jpg)
 
-HTML İNJECTİON - STORED (BLOG)
+html injection - stored (BLOG):
 
 eğer bir stored açığı olursa burda çalıştırdığımız bir kod web sitesine giren herkesi etkiler farklı bilgisayrdan bu web sitesine girseniz bile hackerin çalıştırdığı kod çalışacaktır.
 örnek olarak alert scripti çalıştırırsak giren her kullanıcı bu alerti görür
@@ -53,7 +55,9 @@ görülen html kodunu yazıp forward ediyoruz
 
 görüldüğü gibi yazdığımız kod çalıştı.
 
-PHP İNJECTİON
+PHP ENJEKSİYON AÇIKLARI 
+
+php injection:
 
 php urlsinde komut çalıştırmayı deniyoruz 
 normalde iki komut çalıştırmek için komutların arasına ; konur şimdi bunu deneyeceğiz
